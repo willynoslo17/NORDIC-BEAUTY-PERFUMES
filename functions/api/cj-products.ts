@@ -1,5 +1,5 @@
 const BASE = "https://developers.cjdropshipping.com/api2.0/v1";
-const TERMS = new Set(["beauty", "skincare", "perfume", "facial", "cosmetic", "hair care", "electronics", "toys", "home living", "fitness", "pet supplies", "car accessories", "solar energy"]);
+const TERMS = new Set(["beauty", "skincare", "perfume", "facial", "cosmetic", "hair care", "electronics", "smart home", "mobile accessories", "wearables", "toys", "home living", "fitness", "pet supplies", "car accessories", "solar energy"]);
 
 async function getToken(apiKey: string) {
   const response = await fetch(BASE + "/authentication/getAccessToken", {
