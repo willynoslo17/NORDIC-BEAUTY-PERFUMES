@@ -1,5 +1,5 @@
 const BASE = "https://developers.cjdropshipping.com/api2.0/v1";
-const TERMS = new Set(["beauty", "skincare", "perfume", "facial", "cosmetic", "hair care"]);
+const TERMS = new Set(["beauty", "skincare", "perfume", "facial", "cosmetic", "hair care", "electronics", "toys", "home living", "fitness", "pet supplies", "car accessories", "solar energy"]);
 
 async function getToken(apiKey: string) {
   const response = await fetch(BASE + "/authentication/getAccessToken", {
@@ -20,6 +20,7 @@ export async function onRequestGet(context: any) {
   const url = new URL(context.request.url);
   const wanted = (url.searchParams.get("q") || "beauty").toLowerCase();
   const query = TERMS.has(wanted) ? wanted : "beauty";
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
   try {
     const accessToken = await getToken(apiKey);
     const productsUrl = new URL(BASE + "/product/listV2");
@@ -31,8 +32,8 @@ export async function onRequestGet(context: any) {
     if (!response.ok || result?.success === false) {
       return Response.json({ error: result?.message || "CJ product request failed" }, { status: 502 });
     }
-    return Response.json({ ok: true, supplier: "cj", sector: "beauty", query, markets: ["NO", "EU", "PE"], data: result.data });
+    return Response.json({ ok: true, supplier: "cj", sector: query, query, markets: ["NO", "EU", "PE"], data: result.data }, { headers });
   } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : "CJ request failed" }, { status: 502 });
+    return Response.json({ error: error instanceof Error ? error.message : "CJ request failed" }, { status: 502, headers });
   }
 }
