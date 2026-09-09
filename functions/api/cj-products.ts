@@ -20,11 +20,13 @@ export async function onRequestGet(context: any) {
   const url = new URL(context.request.url);
   const wanted = (url.searchParams.get("q") || "beauty").toLowerCase();
   const query = TERMS.has(wanted) ? wanted : "beauty";
+  const requestedPage = Number.parseInt(url.searchParams.get("page") || "1", 10);
+  const page = Number.isFinite(requestedPage) ? Math.min(5, Math.max(1, requestedPage)) : 1;
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
   try {
     const accessToken = await getToken(apiKey);
     const productsUrl = new URL(BASE + "/product/listV2");
-    productsUrl.searchParams.set("page", "1");
+    productsUrl.searchParams.set("page", String(page));
     productsUrl.searchParams.set("size", "20");
     productsUrl.searchParams.set("keyWord", query);
     const response = await fetch(productsUrl, { headers: { "CJ-Access-Token": accessToken } });
@@ -32,7 +34,7 @@ export async function onRequestGet(context: any) {
     if (!response.ok || result?.success === false) {
       return Response.json({ error: result?.message || "CJ product request failed" }, { status: 502 });
     }
-    return Response.json({ ok: true, supplier: "cj", sector: query, query, markets: ["NO", "EU", "PE"], data: result.data }, { headers });
+    return Response.json({ ok: true, supplier: "cj", sector: query, query, page, markets: ["NO", "EU", "PE"], data: result.data }, { headers });
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : "CJ request failed" }, { status: 502, headers });
   }
