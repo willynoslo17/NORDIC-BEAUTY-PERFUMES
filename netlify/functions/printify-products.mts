@@ -1,6 +1,5 @@
 const BASE = "https://api.printify.com/v1";
 
-// Per-store curated catalog — PRIMARY source for storefront (never replace with shared shop dump)
 const SELECTED: any[] = [
   {
     "id": "printify-beauty-1",
@@ -226,6 +225,156 @@ const SELECTED: any[] = [
     "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
     "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-16",
+    "sku": "PFY-BEAU-TEE-AURORA",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Aurora Mist Soft Tee",
+    "category": "Beauty Merch",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 28.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-17",
+    "sku": "PFY-BEAU-CREW-ROSE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Velvet Rose Crewneck",
+    "category": "Perfumes",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 47.9,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-18",
+    "sku": "PFY-BEAU-TOTE-CLEAN",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Clean Girl Canvas Tote",
+    "category": "Skincare",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-19",
+    "sku": "PFY-BEAU-MUG-DEW",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Dew Drop Ceramic Mug",
+    "category": "Beauty Merch",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 18.5,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-20",
+    "sku": "PFY-BEAU-TEE-SPA",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Spa Day Tee",
+    "category": "Skincare",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 27.5,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-21",
+    "sku": "PFY-BEAU-TEE-SCENT",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Scent Journal Poster Tee",
+    "category": "Perfumes",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 26.9,
+    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-22",
+    "sku": "PFY-BEAU-MUG-GLASS",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Glass Skin Ritual Mug",
+    "category": "Skincare",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-23",
+    "sku": "PFY-BEAU-TOTE-ATELIER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bloom Atelier Tote",
+    "category": "Perfumes",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-24",
+    "sku": "PFY-BEAU-CREW-MUSK",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Midnight Musk Crewneck",
+    "category": "Perfumes",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 48.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty"
+  },
+  {
+    "id": "printify-beauty-25",
+    "sku": "PFY-BEAU-TEE-HYDRA",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Hydra Barrier Soft Tee",
+    "category": "Skincare",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 29.5,
+    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
   }
 ];
 
@@ -310,18 +459,11 @@ async function enrichFromLive(token: string, shopId: string, curatedProducts: an
     const result: any = await response.json();
     const list = Array.isArray(result?.data) ? result.data : Array.isArray(result) ? result : [];
     if (!list.length) return curatedProducts;
-
     const typeWords: Record<string, string[]> = {
-      tote: ["tote", "bag"],
-      tee: ["t-shirt", "tshirt", "tee", "shirt"],
-      mug: ["mug", "cup", "coffee"],
-      crewneck: ["crewneck", "crew neck", "sweatshirt"],
-      hoodie: ["hoodie", "zip"],
-      poster: ["poster", "print"],
-      case: ["case", "phone", "tough"],
-      cap: ["cap", "hat"],
+      tote: ["tote", "bag"], tee: ["t-shirt", "tshirt", "tee", "shirt"], mug: ["mug", "cup", "coffee"],
+      crewneck: ["crewneck", "crew neck", "sweatshirt"], hoodie: ["hoodie", "zip"],
+      poster: ["poster", "print"], case: ["case", "phone", "tough"], cap: ["cap", "hat"],
     };
-
     return curatedProducts.map((item) => {
       const words = typeWords[String(item.matchType || "").toLowerCase()] || [];
       const match = list.find((live: any) => {
@@ -360,30 +502,15 @@ export default async (req: Request, context: any) => {
   const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
   const defaultSector = String(SELECTED[0]?.sector || "beauty");
   const sector = resolveSector(wanted || defaultSector);
-  const headers = {
-    "access-control-allow-origin": "*",
-    "cache-control": "public, max-age=60",
-  };
-
-  // PRIMARY: curated per-store list. Live Printify only enriches — never replaces.
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   let products = curated(sector).slice(0, 30);
   const token = (typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_API_TOKEN") : context?.env?.PRINTIFY_API_TOKEN;
   const shopId = ((typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_SHOP_ID") : context?.env?.PRINTIFY_SHOP_ID) || "28847802";
   if (token && products.length) {
     products = await enrichFromLive(String(token), String(shopId), products);
   }
-
   return Response.json(
-    {
-      ok: true,
-      supplier: "printify",
-      sector,
-      query: sector,
-      products,
-      count: products.length,
-      source: "printify-selected-primary",
-      markets: ["NO", "EU", "PE"],
-    },
+    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 };

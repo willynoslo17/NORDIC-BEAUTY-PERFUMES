@@ -223,9 +223,158 @@ const SELECTED: any[] = [
     "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
     "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-16",
+    "sku": "GEL-BEAU-TEE-AURORA",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Aurora Mist Soft Tee",
+    "category": "Beauty Merch",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 28.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-17",
+    "sku": "GEL-BEAU-CREW-ROSE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Velvet Rose Crewneck",
+    "category": "Perfumes",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 47.9,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-18",
+    "sku": "GEL-BEAU-TOTE-CLEAN",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Clean Girl Canvas Tote",
+    "category": "Skincare",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-19",
+    "sku": "GEL-BEAU-MUG-DEW",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Dew Drop Ceramic Mug",
+    "category": "Beauty Merch",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 18.5,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-20",
+    "sku": "GEL-BEAU-TEE-SPA",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Spa Day Tee",
+    "category": "Skincare",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 27.5,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-21",
+    "sku": "GEL-BEAU-TEE-SCENT",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Scent Journal Poster Tee",
+    "category": "Perfumes",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 26.9,
+    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-22",
+    "sku": "GEL-BEAU-MUG-GLASS",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Glass Skin Ritual Mug",
+    "category": "Skincare",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-23",
+    "sku": "GEL-BEAU-TOTE-ATELIER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bloom Atelier Tote",
+    "category": "Perfumes",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-24",
+    "sku": "GEL-BEAU-CREW-MUSK",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Midnight Musk Crewneck",
+    "category": "Perfumes",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 48.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty"
+  },
+  {
+    "id": "gelato-beauty-25",
+    "sku": "GEL-BEAU-TEE-HYDRA",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Hydra Barrier Soft Tee",
+    "category": "Skincare",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 29.5,
+    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty"
   }
 ];
-
 const SECTOR_ALIASES: Record<string, string> = {
   "beauty": "beauty",
   "perfume": "beauty",
@@ -255,12 +404,10 @@ const SECTOR_ALIASES: Record<string, string> = {
   "auto": "car accessories",
   "automotive": "car accessories"
 };
-
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
-
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
   if (!key) return SELECTED[0]?.sector || "beauty";
@@ -270,7 +417,6 @@ function resolveSector(raw: string) {
   }
   return key;
 }
-
 function curated(sector: string) {
   return SELECTED
     .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
@@ -288,7 +434,6 @@ function curated(sector: string) {
     }))
     .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
-
 export async function onRequestGet(context: any) {
   const url = new URL(context.request.url);
   const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
@@ -297,16 +442,7 @@ export async function onRequestGet(context: any) {
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   const products = curated(sector).slice(0, 30);
   return Response.json(
-    {
-      ok: true,
-      supplier: "gelato",
-      sector,
-      query: sector,
-      products,
-      count: products.length,
-      source: "gelato-selected-primary",
-      markets: ["NO", "EU", "PE"],
-    },
+    { ok: true, supplier: "gelato", sector, query: sector, products, count: products.length, source: "gelato-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 }
