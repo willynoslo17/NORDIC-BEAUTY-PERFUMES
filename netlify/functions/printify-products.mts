@@ -1,5 +1,4 @@
 const BASE = "https://api.printify.com/v1";
-
 const SELECTED: any[] = [
   {
     "id": "printify-beauty-1",
@@ -14,7 +13,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.5,
     "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-2",
@@ -29,7 +29,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.9,
     "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-3",
@@ -44,7 +45,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-4",
@@ -59,7 +61,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 29.9,
     "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-5",
@@ -74,7 +77,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 28.5,
     "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-6",
@@ -89,7 +93,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 27.9,
     "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-7",
@@ -104,7 +109,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.9,
     "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
     "matchType": "mug",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-8",
@@ -119,7 +125,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 18.9,
     "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
     "matchType": "mug",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-9",
@@ -134,7 +141,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 17.9,
     "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&q=80",
     "matchType": "mug",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-10",
@@ -149,7 +157,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 44.9,
     "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
     "matchType": "crewneck",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-11",
@@ -164,7 +173,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 46.9,
     "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
     "matchType": "crewneck",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-12",
@@ -179,7 +189,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 26.9,
     "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-13",
@@ -194,7 +205,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 27.5,
     "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-14",
@@ -209,7 +221,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 18.5,
     "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
     "matchType": "mug",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-15",
@@ -224,7 +237,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.9,
     "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-16",
@@ -239,7 +253,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 28.9,
     "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-17",
@@ -254,7 +269,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 47.9,
     "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
     "matchType": "crewneck",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-18",
@@ -269,7 +285,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.5,
     "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-19",
@@ -284,7 +301,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 18.5,
     "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
     "matchType": "mug",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-20",
@@ -299,7 +317,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 27.5,
     "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-21",
@@ -314,7 +333,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 26.9,
     "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-22",
@@ -329,7 +349,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.5,
     "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
     "matchType": "mug",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-23",
@@ -344,7 +365,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.5,
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
     "matchType": "tote",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-24",
@@ -359,7 +381,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 48.9,
     "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
     "matchType": "crewneck",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-beauty-25",
@@ -374,10 +397,410 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 29.5,
     "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "beauty"
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-26",
+    "sku": "PFY-BEAU-POSTER-GLOW",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Glow Lifestyle Poster",
+    "category": "Wall Art",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 24.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-27",
+    "sku": "PFY-BEAU-POSTER-NOTES",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Perfume Notes Wall Print",
+    "category": "Wall Art",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-28",
+    "sku": "PFY-BEAU-TEE-SELFCARE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Self-Care Club Soft Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 28.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-29",
+    "sku": "PFY-BEAU-TOTE-BLOOM2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bloom Market Day Tote",
+    "category": "Bags",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-30",
+    "sku": "PFY-BEAU-MUG-RITUAL",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Morning Ritual Coffee Mug",
+    "category": "Drinkware",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 18.9,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-31",
+    "sku": "PFY-BEAU-TEE-FOCUS",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Soft Focus Aesthetic Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 27.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-32",
+    "sku": "PFY-BEAU-TOTE-PINK",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Atelier Pink Canvas Tote",
+    "category": "Bags",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-33",
+    "sku": "PFY-BEAU-CREW-QUIET",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Quiet Luxury Crewneck",
+    "category": "Apparel",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 46.9,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-34",
+    "sku": "PFY-BEAU-POSTER-ROSE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rose Studio Wall Poster",
+    "category": "Wall Art",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-35",
+    "sku": "PFY-BEAU-TEE-WEEKEND",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Weekend Glow Soft Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 26.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-36",
+    "sku": "PFY-BEAU-MUG-SPAMOOD",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Spa Day Mood Mug",
+    "category": "Drinkware",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 17.9,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-37",
+    "sku": "PFY-BEAU-TOTE-SHELF",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Clean Shelf Organizer Tote",
+    "category": "Bags",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-38",
+    "sku": "PFY-BEAU-POSTER-BLUSH",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Blush Line Poster",
+    "category": "Wall Art",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 25.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-39",
+    "sku": "PFY-BEAU-TEE-MIRROR",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Mirror Selfie Soft Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 29.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-40",
+    "sku": "PFY-BEAU-CREW-CANDLE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Candlelight Crewneck",
+    "category": "Apparel",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 48.5,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-41",
+    "sku": "PFY-BEAU-MUG-VELVET2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Velvet Hour Coffee Mug",
+    "category": "Drinkware",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-42",
+    "sku": "PFY-BEAU-TOTE-PETAL",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Petal Market Canvas Tote",
+    "category": "Bags",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-43",
+    "sku": "PFY-BEAU-TEE-POWER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Soft Power Aesthetic Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 28.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-44",
+    "sku": "PFY-BEAU-POSTER-SHELF",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Skincare Shelf Wall Poster",
+    "category": "Wall Art",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-45",
+    "sku": "PFY-BEAU-TEE-FJORD",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Fjord Mist Soft Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 27.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-46",
+    "sku": "PFY-BEAU-MUG-VANITY",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Vanity Desk Mug",
+    "category": "Drinkware",
+    "supplierPriceUsd": 6.5,
+    "suggestedRetailUsd": 16.9,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
+    "matchType": "mug",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-47",
+    "sku": "PFY-BEAU-TOTE-SILK",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Silk Ribbon Canvas Tote",
+    "category": "Bags",
+    "supplierPriceUsd": 7.1,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tote",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-48",
+    "sku": "PFY-BEAU-POSTER-GOLD",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Golden Hour Beauty Poster",
+    "category": "Wall Art",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 26.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-49",
+    "sku": "PFY-BEAU-CREW-CALM",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Calm Glow Crewneck",
+    "category": "Apparel",
+    "supplierPriceUsd": 16.5,
+    "suggestedRetailUsd": 47.5,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
+    "matchType": "crewneck",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-beauty-50",
+    "sku": "PFY-BEAU-TEE-VANITY",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Vanity Soft Tee",
+    "category": "Apparel",
+    "supplierPriceUsd": 9.4,
+    "suggestedRetailUsd": 26.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "beauty",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   }
 ];
-
 const SECTOR_ALIASES: Record<string, string> = {
   "beauty": "beauty",
   "perfume": "beauty",
@@ -407,12 +830,10 @@ const SECTOR_ALIASES: Record<string, string> = {
   "auto": "car accessories",
   "automotive": "car accessories"
 };
-
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
-
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
   if (!key) return SELECTED[0]?.sector || "beauty";
@@ -422,7 +843,6 @@ function resolveSector(raw: string) {
   }
   return key;
 }
-
 function curated(sector: string) {
   return SELECTED
     .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
@@ -440,21 +860,18 @@ function curated(sector: string) {
       image: String(p.image || ""),
       matchType: String(p.matchType || ""),
       sector: String(p.sector || sector),
+      compliance: String(p.compliance || "EU/Nordic POD merch"),
     }))
     .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
-
 function haystack(p: any) {
   return [p.name, p.title, p.category, ...(Array.isArray(p.tags) ? p.tags : []), p.sku].join(" ").toLowerCase();
 }
-
 async function enrichFromLive(token: string, shopId: string, curatedProducts: any[]) {
   try {
     const apiUrl = new URL(BASE + `/shops/${shopId}/products.json`);
     apiUrl.searchParams.set("limit", "50");
-    const response = await fetch(apiUrl, {
-      headers: { Authorization: `Bearer ${token}`, "User-Agent": "NordicStore/1.0" },
-    });
+    const response = await fetch(apiUrl, { headers: { Authorization: `Bearer ${token}`, "User-Agent": "NordicStore/1.0" } });
     if (!response.ok) return curatedProducts;
     const result: any = await response.json();
     const list = Array.isArray(result?.data) ? result.data : Array.isArray(result) ? result : [];
@@ -491,11 +908,8 @@ async function enrichFromLive(token: string, shopId: string, curatedProducts: an
         enriched: true,
       };
     });
-  } catch (_) {
-    return curatedProducts;
-  }
+  } catch (_) { return curatedProducts; }
 }
-
 export default async (req: Request, context: any) => {
   if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
   const url = new URL(req.url);
@@ -503,14 +917,12 @@ export default async (req: Request, context: any) => {
   const defaultSector = String(SELECTED[0]?.sector || "beauty");
   const sector = resolveSector(wanted || defaultSector);
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  let products = curated(sector).slice(0, 30);
+  let products = curated(sector).slice(0, 50);
   const token = (typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_API_TOKEN") : context?.env?.PRINTIFY_API_TOKEN;
   const shopId = ((typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_SHOP_ID") : context?.env?.PRINTIFY_SHOP_ID) || "28847802";
-  if (token && products.length) {
-    products = await enrichFromLive(String(token), String(shopId), products);
-  }
+  if (token && products.length) products = await enrichFromLive(String(token), String(shopId), products);
   return Response.json(
-    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", markets: ["NO", "EU", "PE"] },
+    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", compliance: "EU/Nordic POD merch", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 };
