@@ -1,875 +1,239 @@
-const SELECTED: any[] = [
-  {
-    "id": "gelato-beauty-1",
-    "sku": "GEL-BEAU-TOTE-GLOW",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Glow Beauty Tote",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-2",
-    "sku": "GEL-BEAU-TOTE-NOTES",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Perfume Notes Canvas Tote",
-    "category": "Perfumes",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-3",
-    "sku": "GEL-BEAU-TOTE-RITUAL",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Self-Care Ritual Tote",
-    "category": "Skincare",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-4",
-    "sku": "GEL-BEAU-TEE-GLOW",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Glow Unisex Tee",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 29.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-5",
-    "sku": "GEL-BEAU-TEE-CLUB",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Skincare Club T-Shirt",
-    "category": "Skincare",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 28.5,
-    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-6",
-    "sku": "GEL-BEAU-TEE-ROSE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rose Atelier Soft Tee",
-    "category": "Perfumes",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 27.9,
-    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-7",
-    "sku": "GEL-BEAU-MUG-ACCENT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Accent Mug \u2014 Nordic Beauty",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 19.9,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-8",
-    "sku": "GEL-BEAU-MUG-GLOW",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Morning Glow Coffee Mug",
-    "category": "Skincare",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 18.9,
-    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-9",
-    "sku": "GEL-BEAU-MUG-SPA",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Spa Day Ceramic Mug",
-    "category": "Beauty",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 17.9,
-    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-10",
-    "sku": "GEL-BEAU-CREW-GLOW",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Glow Crewneck",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 44.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-11",
-    "sku": "GEL-BEAU-CREW-VELVET",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Velvet Night Crewneck",
-    "category": "Perfumes",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 46.9,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-12",
-    "sku": "GEL-BEAU-TEE-BARRIER",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Barrier Care Affirmation Tee",
-    "category": "Skincare",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 26.9,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-13",
-    "sku": "GEL-BEAU-TEE-SERUM",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Silk Serum Soft Tee",
-    "category": "Skincare",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 27.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-14",
-    "sku": "GEL-BEAU-MUG-ATELIER",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Atelier Candle Mug",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 18.5,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-15",
-    "sku": "GEL-BEAU-TOTE-BLOOM",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Bloom Canvas Tote",
-    "category": "Perfumes",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-16",
-    "sku": "GEL-BEAU-TEE-AURORA",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Aurora Mist Soft Tee",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 28.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-17",
-    "sku": "GEL-BEAU-CREW-ROSE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Velvet Rose Crewneck",
-    "category": "Perfumes",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 47.9,
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-18",
-    "sku": "GEL-BEAU-TOTE-CLEAN",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Clean Girl Canvas Tote",
-    "category": "Skincare",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-19",
-    "sku": "GEL-BEAU-MUG-DEW",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Dew Drop Ceramic Mug",
-    "category": "Beauty Merch",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 18.5,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-20",
-    "sku": "GEL-BEAU-TEE-SPA",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Spa Day Tee",
-    "category": "Skincare",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 27.5,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-21",
-    "sku": "GEL-BEAU-TEE-SCENT",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Scent Journal Poster Tee",
-    "category": "Perfumes",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 26.9,
-    "image": "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-22",
-    "sku": "GEL-BEAU-MUG-GLASS",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Glass Skin Ritual Mug",
-    "category": "Skincare",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 19.5,
-    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-23",
-    "sku": "GEL-BEAU-TOTE-ATELIER",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Bloom Atelier Tote",
-    "category": "Perfumes",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-24",
-    "sku": "GEL-BEAU-CREW-MUSK",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Midnight Musk Crewneck",
-    "category": "Perfumes",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 48.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-25",
-    "sku": "GEL-BEAU-TEE-HYDRA",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Hydra Barrier Soft Tee",
-    "category": "Skincare",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 29.5,
-    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "gelato-beauty-26",
-    "sku": "GEL-BEAU-POSTER-GLOW",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Glow Lifestyle Poster",
-    "category": "Wall Art",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-27",
-    "sku": "GEL-BEAU-POSTER-NOTES",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Perfume Notes Wall Print",
-    "category": "Wall Art",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-28",
-    "sku": "GEL-BEAU-TEE-SELFCARE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Self-Care Club Soft Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 28.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-29",
-    "sku": "GEL-BEAU-TOTE-BLOOM2",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Bloom Market Day Tote",
-    "category": "Bags",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-30",
-    "sku": "GEL-BEAU-MUG-RITUAL",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Morning Ritual Coffee Mug",
-    "category": "Drinkware",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 18.9,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-31",
-    "sku": "GEL-BEAU-TEE-FOCUS",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Focus Aesthetic Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 27.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-32",
-    "sku": "GEL-BEAU-TOTE-PINK",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Atelier Pink Canvas Tote",
-    "category": "Bags",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-33",
-    "sku": "GEL-BEAU-CREW-QUIET",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Quiet Luxury Crewneck",
-    "category": "Apparel",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 46.9,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-34",
-    "sku": "GEL-BEAU-POSTER-ROSE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rose Studio Wall Poster",
-    "category": "Wall Art",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-35",
-    "sku": "GEL-BEAU-TEE-WEEKEND",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Weekend Glow Soft Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 26.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-36",
-    "sku": "GEL-BEAU-MUG-SPAMOOD",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Spa Day Mood Mug",
-    "category": "Drinkware",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 17.9,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-37",
-    "sku": "GEL-BEAU-TOTE-SHELF",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Clean Shelf Organizer Tote",
-    "category": "Bags",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-38",
-    "sku": "GEL-BEAU-POSTER-BLUSH",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Blush Line Poster",
-    "category": "Wall Art",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-39",
-    "sku": "GEL-BEAU-TEE-MIRROR",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Mirror Selfie Soft Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 29.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-40",
-    "sku": "GEL-BEAU-CREW-CANDLE",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Candlelight Crewneck",
-    "category": "Apparel",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 48.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-41",
-    "sku": "GEL-BEAU-MUG-VELVET2",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Velvet Hour Coffee Mug",
-    "category": "Drinkware",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 19.5,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-42",
-    "sku": "GEL-BEAU-TOTE-PETAL",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Petal Market Canvas Tote",
-    "category": "Bags",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-43",
-    "sku": "GEL-BEAU-TEE-POWER",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Soft Power Aesthetic Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 28.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-44",
-    "sku": "GEL-BEAU-POSTER-SHELF",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Skincare Shelf Wall Poster",
-    "category": "Wall Art",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-45",
-    "sku": "GEL-BEAU-TEE-FJORD",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Fjord Mist Soft Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 27.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-46",
-    "sku": "GEL-BEAU-MUG-VANITY",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Vanity Desk Mug",
-    "category": "Drinkware",
-    "supplierPriceUsd": 6.5,
-    "suggestedRetailUsd": 16.9,
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcc036?auto=format&fit=crop&w=800&q=80",
-    "matchType": "mug",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-47",
-    "sku": "GEL-BEAU-TOTE-SILK",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Silk Ribbon Canvas Tote",
-    "category": "Bags",
-    "supplierPriceUsd": 7.1,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1590874103328-eac38a67478e?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tote",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-48",
-    "sku": "GEL-BEAU-POSTER-GOLD",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Golden Hour Beauty Poster",
-    "category": "Wall Art",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 26.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-49",
-    "sku": "GEL-BEAU-CREW-CALM",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Calm Glow Crewneck",
-    "category": "Apparel",
-    "supplierPriceUsd": 16.5,
-    "suggestedRetailUsd": 47.5,
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=800&q=80",
-    "matchType": "crewneck",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "gelato-beauty-50",
-    "sku": "GEL-BEAU-TEE-VANITY",
-    "supplier": "Gelato",
-    "provider": "gelato",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Vanity Soft Tee",
-    "category": "Apparel",
-    "supplierPriceUsd": 9.4,
-    "suggestedRetailUsd": 26.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "beauty",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  }
-];
+const PRODUCT_BASE = "https://product.gelatoapis.com";
+const ECOM_BASE = "https://ecommerce.gelatoapis.com";
+
 const SECTOR_ALIASES: Record<string, string> = {
-  "beauty": "beauty",
-  "perfume": "beauty",
-  "perfumes": "beauty",
-  "skincare": "beauty",
-  "toys": "toys",
-  "kids": "toys",
-  "kid": "toys",
-  "children": "toys",
-  "electronics": "electronics",
-  "tech": "electronics",
-  "technology": "electronics",
-  "pet supplies": "pet supplies",
-  "pets": "pet supplies",
-  "pet": "pet supplies",
-  "home living": "home living",
-  "home": "home living",
-  "living": "home living",
-  "fitness": "fitness",
-  "outdoor": "fitness",
-  "sports": "fitness",
-  "solar energy": "solar energy",
-  "energy": "solar energy",
-  "solar": "solar energy",
-  "car accessories": "car accessories",
-  "car": "car accessories",
-  "auto": "car accessories",
-  "automotive": "car accessories"
+  beauty: "beauty", perfume: "beauty", perfumes: "beauty", skincare: "beauty",
+  toys: "toys", kids: "toys", kid: "toys", children: "toys",
+  electronics: "electronics", tech: "electronics", technology: "electronics",
+  "pet supplies": "pet supplies", pets: "pet supplies", pet: "pet supplies",
+  "home living": "home living", home: "home living", living: "home living",
+  fitness: "fitness", outdoor: "fitness", sports: "fitness",
+  "solar energy": "solar energy", energy: "solar energy", solar: "solar energy",
+  "car accessories": "car accessories", car: "car accessories", auto: "car accessories", automotive: "car accessories",
 };
+
+/** Preferred Gelato catalog UIDs per sector (POD merch). Unknown UIDs are skipped. */
+const SECTOR_CATALOGS: Record<string, string[]> = {
+  beauty: ["apparel", "tote-bags", "mugs", "posters", "canvas"],
+  toys: ["posters", "apparel", "canvas", "cards"],
+  electronics: ["phone-cases", "apparel", "mugs", "posters"],
+  "pet supplies": ["apparel", "tote-bags", "mugs", "posters"],
+  "home living": ["posters", "canvas", "mugs", "tote-bags", "apparel", "pillows"],
+  fitness: ["apparel", "tote-bags", "posters", "mugs"],
+  "solar energy": ["posters", "tote-bags", "apparel", "canvas"],
+  "car accessories": ["apparel", "tote-bags", "posters", "mugs"],
+};
+
+const FALLBACK_CATALOGS = ["posters", "apparel", "mugs", "canvas", "cards", "tote-bags", "phone-cases", "pillows", "calendars", "framed-posters"];
+
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
+
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
-  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (!key) return "beauty";
   if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
   for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
     if (key.includes(alias) || alias.includes(key)) return sector;
   }
-  return key;
+  return SECTOR_CATALOGS[key] ? key : "beauty";
 }
-function curated(sector: string) {
-  return SELECTED
-    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
-    .map((p, i) => ({
-      id: String(p.id || `gelato-selected-${i}`),
-      sku: String(p.sku || ""),
-      supplier: "Gelato",
-      provider: "gelato",
-      name: String(p.name || "Gelato product"),
-      category: String(p.category || sector),
-      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
-      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
-      image: String(p.image || ""),
-      sector: String(p.sector || sector),
-    }))
-    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
+
+function prettyTitle(productUid: string, catalogUid: string, product: any) {
+  if (product?.title) return String(product.title);
+  if (product?.name) return String(product.name);
+  const bits = String(productUid || "").split("_").filter(Boolean);
+  const human = bits
+    .slice(0, 6)
+    .map((b) => b.replace(/-/g, " "))
+    .join(" · ");
+  const cat = String(catalogUid || "Gelato").replace(/-/g, " ");
+  return human ? `${cat}: ${human}` : `Gelato ${cat} product`;
 }
-export default async (req: Request, context: any) => {
-  if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
-  const url = new URL(req.url);
-  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
-  const defaultSector = String(SELECTED[0]?.sector || "beauty");
-  const sector = resolveSector(wanted || defaultSector);
-  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  const products = curated(sector).slice(0, 50);
-  return Response.json(
-    { ok: true, supplier: "gelato", sector, query: sector, products, count: products.length, source: "gelato-selected-primary", markets: ["NO", "EU", "PE"] },
-    { status: products.length ? 200 : 503, headers }
+
+function estimateRetail(catalogUid: string) {
+  const c = String(catalogUid || "").toLowerCase();
+  if (c.includes("mug")) return { cost: 6.5, retail: 18.9 };
+  if (c.includes("tote")) return { cost: 7.1, retail: 22.5 };
+  if (c.includes("poster") || c.includes("canvas")) return { cost: 8.2, retail: 24.9 };
+  if (c.includes("phone") || c.includes("case")) return { cost: 8.8, retail: 24.9 };
+  if (c.includes("pillow")) return { cost: 11, retail: 32.9 };
+  if (c.includes("apparel") || c.includes("shirt") || c.includes("hoodie")) return { cost: 9.4, retail: 29.9 };
+  return { cost: 9, retail: 26.9 };
+}
+
+function normalizeCatalogProduct(product: any, index: number, sector: string, catalogUid: string) {
+  const uid = String(product?.productUid || product?.id || `gelato-${index}`);
+  const prices = estimateRetail(catalogUid);
+  const retail = money(product?.price?.basePrice ?? product?.price?.amount ?? product?.price) || prices.retail;
+  const cost = money(product?.cost ?? product?.supplierPrice) || prices.cost;
+  return {
+    id: uid,
+    sku: uid.slice(0, 48),
+    supplier: "Gelato",
+    provider: "gelato",
+    gelatoProductUid: uid,
+    name: prettyTitle(uid, catalogUid, product),
+    category: String(product?.category || catalogUid || sector),
+    brand: "Gelato",
+    supplierPriceUsd: cost,
+    suggestedRetailUsd: retail,
+    image: String(product?.previewUrl || product?.imageUrl || product?.thumbnailUrl || product?.image || ""),
+    sector,
+    catalogUid,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+function normalizeEcom(product: any, index: number, sector: string) {
+  const retail = money(
+    product?.price?.basePrice ?? product?.price?.amount ?? product?.price ?? product?.suggestedRetailUsd ?? product?.retailPrice
   );
+  return {
+    id: String(product?.id || product?.productUid || `gelato-ecom-${index}`),
+    sku: String(product?.sku || product?.productUid || product?.id || ""),
+    supplier: "Gelato",
+    provider: "gelato",
+    gelatoProductUid: String(product?.productUid || product?.id || ""),
+    name: String(product?.title || product?.name || "Gelato product"),
+    category: String(product?.category || sector),
+    brand: "Gelato",
+    supplierPriceUsd: retail,
+    suggestedRetailUsd: retail,
+    image: String(product?.previewUrl || product?.imageUrl || product?.image || product?.thumbnailUrl || ""),
+    sector,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+async function listCatalogUids(headers: Record<string, string>) {
+  const response = await fetch(`${PRODUCT_BASE}/v3/catalogs`, { headers });
+  if (!response.ok) return [] as string[];
+  const result: any = await response.json().catch(() => []);
+  const list = Array.isArray(result) ? result : Array.isArray(result?.catalogs) ? result.catalogs : [];
+  return list.map((c: any) => String(c?.catalogUid || c?.uid || c?.id || "")).filter(Boolean);
+}
+
+async function searchCatalog(headers: Record<string, string>, catalogUid: string, limit: number) {
+  const response = await fetch(`${PRODUCT_BASE}/v3/catalogs/${encodeURIComponent(catalogUid)}/products:search`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({ offset: 0, limit }),
+  });
+  if (!response.ok) return [] as any[];
+  const result: any = await response.json().catch(() => ({}));
+  if (Array.isArray(result?.products)) return result.products;
+  if (Array.isArray(result)) return result;
+  return [];
+}
+
+async function loadStoreProducts(headers: Record<string, string>, storeId: string, sector: string) {
+  const url = new URL(`${ECOM_BASE}/v1/stores/${storeId}/products`);
+  url.searchParams.set("limit", "100");
+  url.searchParams.set("offset", "0");
+  const response = await fetch(url.toString(), { headers });
+  if (!response.ok) return [] as any[];
+  const result: any = await response.json().catch(() => ({}));
+  const list = Array.isArray(result?.products) ? result.products : Array.isArray(result) ? result : [];
+  return list.map((p: any, i: number) => normalizeEcom(p, i, sector)).filter((p: any) => p.name && p.suggestedRetailUsd > 0);
+}
+
+async function loadCatalogProducts(headers: Record<string, string>, sector: string) {
+  const available = await listCatalogUids(headers);
+  const preferred = SECTOR_CATALOGS[sector] || SECTOR_CATALOGS.beauty;
+  const ordered = [
+    ...preferred.filter((c) => !available.length || available.includes(c)),
+    ...available.filter((c) => !preferred.includes(c)),
+    ...FALLBACK_CATALOGS.filter((c) => !preferred.includes(c) && !available.includes(c)),
+  ];
+  const uniqueCatalogs = [...new Set(ordered)];
+  const seen = new Set<string>();
+  const out: any[] = [];
+  for (const catalogUid of uniqueCatalogs) {
+    if (out.length >= 50) break;
+    const need = Math.min(25, 50 - out.length);
+    const products = await searchCatalog(headers, catalogUid, need + 5);
+    for (const product of products) {
+      const item = normalizeCatalogProduct(product, out.length, sector, catalogUid);
+      if (!item.id || seen.has(item.id)) continue;
+      seen.add(item.id);
+      out.push(item);
+      if (out.length >= 50) break;
+    }
+  }
+  return out.slice(0, 50);
+}
+
+async function onRequestGet(context: any) {
+  const url = new URL(context.request.url);
+  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
+  const sector = resolveSector(wanted || "beauty");
+  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
+  const apiKey = context.env.GELATO_API_KEY;
+  if (!apiKey) {
+    return Response.json({ error: "Gelato is not configured", products: [], supplier: "Gelato", sector, source: "gelato-unconfigured" }, { status: 503, headers: headersOut });
+  }
+  const headers = { "X-API-KEY": String(apiKey), "content-type": "application/json", "User-Agent": "NordicStore/1.0" };
+
+  try {
+    let storeId = context.env.GELATO_STORE_ID ? String(context.env.GELATO_STORE_ID) : "";
+    if (!storeId) {
+      const storesRes = await fetch(`${ECOM_BASE}/v1/stores`, { headers });
+      if (storesRes.ok) {
+        const stores: any = await storesRes.json().catch(() => ({}));
+        const list = Array.isArray(stores?.stores) ? stores.stores : Array.isArray(stores) ? stores : [];
+        storeId = String(list[0]?.id || list[0]?.storeId || "");
+      }
+    }
+    if (storeId) {
+      const storeProducts = await loadStoreProducts(headers, storeId, sector);
+      if (storeProducts.length >= 8) {
+        return Response.json({
+          ok: true,
+          supplier: "Gelato",
+          sector,
+          query: sector,
+          products: storeProducts.slice(0, 50),
+          count: Math.min(storeProducts.length, 50),
+          source: "gelato-live-store",
+          storeId,
+          markets: ["NO", "EU", "PE"],
+          compliance: "EU/Nordic POD merch",
+        }, { headers: headersOut });
+      }
+    }
+
+    const catalog = await loadCatalogProducts(headers, sector);
+    return Response.json({
+      ok: true,
+      supplier: "Gelato",
+      sector,
+      query: sector,
+      products: catalog,
+      count: catalog.length,
+      source: "gelato-live-catalog",
+      markets: ["NO", "EU", "PE"],
+      compliance: "EU/Nordic POD merch",
+    }, { status: catalog.length ? 200 : 503, headers: headersOut });
+  } catch (error) {
+    return Response.json({
+      error: error instanceof Error ? error.message : "Gelato request failed",
+      products: [],
+      supplier: "Gelato",
+      sector,
+      source: "gelato-error",
+    }, { status: 502, headers: headersOut });
+  }
+}
+
+
+export default async (req: Request) => {
+  if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
+  return onRequestGet({
+    request: req,
+    env: { GELATO_API_KEY: Netlify.env.get("GELATO_API_KEY"), GELATO_STORE_ID: Netlify.env.get("GELATO_STORE_ID") },
+  });
 };
 export const config = { path: "/api/gelato-products" };
