@@ -1,3 +1,4 @@
+import { withQuotes } from "../_shared/quote";
 /**
  * Nordic CJ live curated catalog.
  * Fetches real CJ provider products, scores winners, returns boutique storefront set.
@@ -286,7 +287,13 @@ function curatedPayload(
   };
 }
 
-async function viaFallback(query: string, page: number, headers: Record<string, string>) {
+/** CJ product id for checkout (kept as a string: 19-digit ids must not be rounded). */
+function cjIds(product: any) {
+  const id = String(product?.id ?? "");
+  return { cj_pid: /^[A-Za-z0-9-]{6,64}$/.test(id) && id !== String(product?.sku ?? "") ? id : "" };
+}
+
+async function viaFallback(query: string, page: number, headers: Record<string, string>, env: any) {
   const proxy = new URL(CJ_LIVE_FALLBACK);
   proxy.searchParams.set("q", query);
   proxy.searchParams.set("page", String(page));
@@ -301,6 +308,7 @@ async function viaFallback(query: string, page: number, headers: Record<string, 
   return Response.json(
     {
       ...result,
+      products: await withQuotes(env, "cj", Array.isArray(result.products) ? result.products : [], cjIds),
       sector: PROFILE.sector,
       query,
       page,
@@ -331,7 +339,7 @@ export async function onRequestGet(context: any) {
       return Response.json({ error: "CJ is not configured" }, { status: 503, headers });
     }
     try {
-      return await viaFallback(query, page, headers);
+      return await viaFallback(query, page, headers, context.env);
     } catch (error) {
       return Response.json(
         { error: error instanceof Error ? error.message : "CJ request failed" },
@@ -348,7 +356,7 @@ export async function onRequestGet(context: any) {
       // Never advertise empty curated boutique — surface real failure for retry/failover.
       if (PROFILE.enableFallback) {
         try {
-          return await viaFallback(query, page, headers);
+          return await viaFallback(query, page, headers, context.env);
         } catch (_) {}
       }
       return Response.json(
@@ -356,13 +364,13 @@ export async function onRequestGet(context: any) {
         { status: 502, headers }
       );
     }
-    return Response.json(curatedPayload(PROFILE.sector, query, winners, totalRecords, scanned, page), {
-      headers,
-    });
+    const payload = curatedPayload(PROFILE.sector, query, winners, totalRecords, scanned, page);
+    payload.products = await withQuotes(context.env, "cj", payload.products, cjIds);
+    return Response.json(payload, { headers });
   } catch (error) {
     if (PROFILE.enableFallback) {
       try {
-        return await viaFallback(query, page, headers);
+        return await viaFallback(query, page, headers, context.env);
       } catch (_) {}
     }
     return Response.json(
