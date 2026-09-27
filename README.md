@@ -1,4 +1,6 @@
-# NORDIC-BEAUTY-PERFUMES
+# Bellafru — Beauty & Perfumes
+
+Storefront brand: **Bellafru** · https://bellafru.no/ · Bellafru er et varemerke fra ML Internasjonal. (Repo / Pages project: `NORDIC-BEAUTY-PERFUMES`, formerly "NORDIC-BEAUTY-PERFUMES".)
 International beauty and perfumes ecommerce store for Norway , Europe and Perú.
 ## Direct commerce activation
 
