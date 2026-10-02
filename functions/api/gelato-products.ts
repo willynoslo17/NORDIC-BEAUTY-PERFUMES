@@ -718,7 +718,7 @@ export async function onRequestGet(context: any) {
     return Response.json({ error: "Gelato is not configured", products: [], supplier: "Gelato", sector, source: "gelato-unconfigured" }, { status: 503, headers: headersOut });
   }
   const origin = new URL(context.request.url).origin;
-  const key = `${origin}/__cache/gelato-products/v2?sector=${encodeURIComponent(sector)}`;
+  const key = `${origin}/__cache/gelato-products/v3?sector=${encodeURIComponent(sector)}`;
   const cache = (globalThis as any).caches?.default;
   let cached = gelatoMemory.get(key) || null;
   if (!cached && cache) {
