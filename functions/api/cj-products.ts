@@ -209,9 +209,29 @@ function score(item: any): number {
   return s;
 }
 
+/** Highest variant price in a CJ "min -- max" sellPrice (= min for single-price products). */
+function parseMaxPrice(value: unknown): number {
+  const parts = String(value || "").split(/\s*-+\s*/).map((v) => Number.parseFloat(v)).filter((n) => Number.isFinite(n) && n > 0);
+  return parts.length ? Math.max(...parts) : 0;
+}
+
+/** Adds supplierPriceMaxUsd (variant price range) to products, also for cached payloads built before it existed. */
+function withCostRange(payload: any) {
+  const raw = new Map<string, any>();
+  for (const item of flatten(payload?.data)) raw.set(String(item?.id || item?.sku || ""), item);
+  const products = (Array.isArray(payload?.products) ? payload.products : []).map((product: any) => {
+    if (product?.supplierPriceMaxUsd != null) return product;
+    const source = raw.get(String(product?.id ?? ""));
+    const max = source ? parseMaxPrice(source.sellPrice || source.nowPrice) : 0;
+    return max > 0 ? { ...product, supplierPriceMaxUsd: max } : product;
+  });
+  return { ...payload, products };
+}
+
 function toProduct(item: any, index: number, sector: string) {
   const cost = parsePrice(item.sellPrice || item.nowPrice);
   const retail = cost > 0 ? Math.round(cost * 2.2 * 100) / 100 : 0;
+  const costMax = parseMaxPrice(item.sellPrice || item.nowPrice) || cost;
   return {
     id: String(item.id || item.sku || index),
     name: String(item.nameEn || item.name || "CJ product").slice(0, 160),
@@ -220,6 +240,7 @@ function toProduct(item: any, index: number, sector: string) {
     sku: String(item.sku || ""),
     image: String(item.bigImage || ""),
     supplierPriceUsd: cost,
+    supplierPriceMaxUsd: costMax,
     suggestedRetailUsd: retail,
     base: retail,
     brand: "CJ Dropshipping",
@@ -382,10 +403,11 @@ async function viaFallback(query: string, page: number, headers: Record<string, 
   const response = await fetch(proxy.toString(), {
     headers: { "user-agent": "Mozilla/5.0 nordic-cj-fallback" },
   });
-  const result: any = await response.json().catch(() => null);
-  if (!response.ok || !result?.ok) {
-    return Response.json({ error: result?.error || "CJ fallback failed" }, { status: 502, headers });
+  const fetched: any = await response.json().catch(() => null);
+  if (!response.ok || !fetched?.ok) {
+    return Response.json({ error: fetched?.error || "CJ fallback failed" }, { status: 502, headers });
   }
+  const result = withCostRange(fetched);
   return Response.json(
     {
       ...result,
@@ -435,7 +457,8 @@ export async function onRequestGet(context: any) {
       { status: 502, headers: { ...headers, "x-catalog-cache": state } }
     );
   const serve = async (payload: any, state: string) => {
-    const body = { ...payload, products: await withQuotes(context.env, "cj", payload.products, cjIds) };
+    const ranged = withCostRange(payload);
+    const body = { ...ranged, products: await withQuotes(context.env, "cj", ranged.products, cjIds) };
     return Response.json(body, { headers: { ...headers, "x-catalog-cache": state } });
   };
 
