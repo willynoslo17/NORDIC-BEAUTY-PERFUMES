@@ -686,6 +686,7 @@ async function buildGelato(env: any, sector: string) {
     const stores: any = await gelatoJson(`${ECOM_BASE}/v1/stores`, headers, diag, "storesStatus");
     const list = Array.isArray(stores?.stores) ? stores.stores : Array.isArray(stores) ? stores : [];
     diag.stores = list.length;
+    if (stores && !Array.isArray(stores)) diag.storesResponseKeys = Object.keys(stores).join(",");
     storeId = String(list[0]?.id || list[0]?.storeId || "");
   }
   let products: any[] = [];
@@ -696,6 +697,10 @@ async function buildGelato(env: any, sector: string) {
     diag.catalogProducts = catalog.length;
     const withImage = catalog.filter((p: any) => p.image);
     diag.catalogWithImage = withImage.length;
+    // What Gelato returns for a blank catalog product (field names only) and whether its price API answers.
+    const raw = await searchCatalog(headers, String(catalog[0]?.catalogUid || "mugs"), 1, 0).catch(() => []);
+    if (raw[0]) diag.catalogProductFields = Object.keys(raw[0]).join(",");
+    if (catalog[0]?.gelatoProductUid) diag.catalogPriceProbe = (await gelatoCostUsd(headers, catalog[0].gelatoProductUid, diag)) > 0 ? "cost returned" : "no cost";
     const costs = await mapLimit(withImage.slice(0, MAX_PRICE_LOOKUPS), PRICE_CONCURRENCY, (p: any) => gelatoCostUsd(headers, p.gelatoProductUid, diag));
     products = withImage.slice(0, MAX_PRICE_LOOKUPS).map((p: any, i: number) => ({ ...p, supplierPriceUsd: costs[i] || p.supplierPriceUsd, costSource: costs[i] ? "gelato-price-api" : "gelato-list-price" }))
       .filter((p: any) => p.supplierPriceUsd > 0);
