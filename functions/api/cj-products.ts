@@ -22,6 +22,8 @@ const CJ_LIVE_FALLBACK = "https://nordic-beauty-perfumes.pages.dev/api/cj-produc
 const CACHE_FRESH_MS = 30 * 60 * 1000;
 const CACHE_KEEP_SECONDS = 12 * 3600;
 const EMPTY_RETRY_MS = 30 * 60 * 1000; // genuinely empty after filtering (not a QPS failure)
+/** A CJ call that hangs must not hold the shared in-flight refresh (and every visitor waiting on it) forever. */
+const CJ_FETCH_TIMEOUT_MS = 10000;
 type CachedCatalog = { at: number; payload: any | null };
 const memoryCatalog = new Map<string, CachedCatalog>();
 const inflight = new Map<string, Promise<CachedCatalog | null>>();
@@ -109,6 +111,7 @@ async function getToken(apiKey: string, forceNew = false): Promise<{ token: stri
   }
   for (let attempt = 1; ; attempt++) {
     const response = await fetch(BASE + "/authentication/getAccessToken", {
+      signal: AbortSignal.timeout(CJ_FETCH_TIMEOUT_MS),
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ apiKey }),
@@ -272,7 +275,7 @@ async function fetchPage(token: string, keyword: string, page: number, attempt =
   productsUrl.searchParams.set("page", String(page));
   productsUrl.searchParams.set("size", String(FETCH_SIZE));
   productsUrl.searchParams.set("keyWord", keyword);
-  const response = await fetch(productsUrl, { headers: { "CJ-Access-Token": token } });
+  const response = await fetch(productsUrl, { headers: { "CJ-Access-Token": token }, signal: AbortSignal.timeout(CJ_FETCH_TIMEOUT_MS) });
   const result: any = await response.json().catch(() => ({}));
   const msg = String(result?.message || result?.errorCode || "");
   const qps = response.status === 429 || /too many requests|qps/i.test(msg);
@@ -490,6 +493,11 @@ export async function onRequestGet(context: any) {
     })();
     inflight.set(cacheKey, refresh);
     refresh.finally(() => inflight.delete(cacheKey)).catch(() => {});
+  }
+  // Stale copy available: answer at once and let the refresh finish in the background (stale-while-revalidate).
+  if (cached?.payload) {
+    if (typeof context.waitUntil === "function") context.waitUntil(refresh.catch(() => null));
+    return serve(cached.payload, "stale-revalidate");
   }
   let fresh: CachedCatalog | null = null;
   try {
