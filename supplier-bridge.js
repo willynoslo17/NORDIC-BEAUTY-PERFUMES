@@ -288,12 +288,14 @@
     }
     /* Keep the customer's chosen category filter while more products arrive (reset only if it no longer exists). */
     const cats = new Set(list.map(x => x.cat));
-    if (typeof filter !== "undefined") { try { if (filter !== "All" && filter !== "Todos" && !cats.has(filter)) filter = "All"; } catch (_) {} }
-    if (typeof f !== "undefined") { try { if (f !== "All" && !cats.has(f)) f = "All"; } catch (_) {} }
+    const keepUi = new Set(["All", "Todos", "Alle", "Duft", "Hudpleie", "Makeup"]);
+    if (typeof filter !== "undefined") { try { if (!keepUi.has(filter) && !cats.has(filter)) filter = "Alle"; } catch (_) {} }
+    if (typeof f !== "undefined") { try { if (!keepUi.has(f) && !cats.has(f)) f = "Alle"; } catch (_) {} }
     if (typeof renderFilters === "function") renderFilters();
     else if (typeof rf === "function") rf();
     if (typeof renderProducts === "function") renderProducts();
     else if (typeof rp === "function") rp();
+    if (typeof renderBestsellers === "function") renderBestsellers();
     if (typeof renderCart === "function") renderCart();
     else if (typeof rc === "function") rc();
     /* Re-apply a chosen sort order (commerce-runtime.js) to the appended products. */

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="">
+  <defs>
+    <radialGradient id="glow" cx="70%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#E8C9C0"/>
+      <stop offset="45%" stop-color="#B07A8C"/>
+      <stop offset="100%" stop-color="#2A1F24"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6E7E4" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#C9A96E" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D4A8B0"/>
+      <stop offset="100%" stop-color="#6B3F4C"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <ellipse cx="1180" cy="280" rx="320" ry="220" fill="#C9A96E" opacity=".18" filter="url(#soft)"/>
+  <ellipse cx="420" cy="620" rx="280" ry="200" fill="#F6E7E4" opacity=".12" filter="url(#soft)"/>
+  <!-- Macro perfume bottle suggestion -->
+  <g transform="translate(980 180)">
+    <rect x="70" y="0" width="40" height="48" rx="4" fill="#E8D4C8" opacity=".85"/>
+    <rect x="55" y="48" width="70" height="22" rx="3" fill="#C9A96E" opacity=".9"/>
+    <path d="M40 80 h100 l18 320 h-136 z" fill="url(#glass)" stroke="#F6E7E4" stroke-opacity=".35"/>
+    <path d="M52 200 h76 l10 180 h-96 z" fill="url(#liquid)" opacity=".85"/>
+    <ellipse cx="90" cy="210" rx="36" ry="8" fill="#F6E7E4" opacity=".25"/>
+  </g>
+  <!-- Soft cream jar suggestion -->
+  <g transform="translate(220 420)">
+    <ellipse cx="120" cy="40" rx="110" ry="28" fill="#E8D4C8" opacity=".5"/>
+    <path d="M20 40 h200 v140 a100 40 0 0 1 -200 0 z" fill="#F6E7E4" opacity=".35"/>
+    <ellipse cx="120" cy="180" rx="100" ry="30" fill="#B07A8C" opacity=".35"/>
+    <ellipse cx="120" cy="55" rx="70" ry="16" fill="#C9A96E" opacity=".4"/>
+  </g>
+</svg>

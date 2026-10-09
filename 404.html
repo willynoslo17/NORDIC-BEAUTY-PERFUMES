@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6E7E4">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -11,28 +12,45 @@
 <meta name="twitter:image" content="https://bellafru.no/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <title>Siden finnes ikke — Bellafru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f4efe6;--ink:#1c1915;--muted:#5c564c;--line:#d9d1c3;--accent:#7a3e48;--on-accent:#fff8f3}
+:root{
+  --bg:#F6E7E4;--ink:#141414;--muted:#6B5A5E;--mauve:#B07A8C;--gold:#C9A96E;
+  --line:rgba(176,122,140,.28);--on-accent:#fff;
+}
 *{box-sizing:border-box}
-html,body{margin:0;background:var(--paper);color:var(--ink)}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{
+  font-family:Jost,system-ui,sans-serif;line-height:1.55;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;padding:2rem 1.25rem;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 10% -10%,rgba(201,169,110,.2),transparent 55%),
+    radial-gradient(ellipse 70% 45% at 100% 0%,rgba(176,122,140,.16),transparent 50%);
+}
 main{width:100%;max-width:36rem}
-.brand{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;margin:0;color:var(--ink);text-decoration:none}
-.rubro{margin:.15rem 0 0;color:var(--muted);font-size:.95rem}
-.code{font-family:Georgia,"Times New Roman",serif;font-size:clamp(4.5rem,18vw,7rem);line-height:1;font-weight:700;color:var(--accent);margin:2rem 0 .5rem}
-h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:700;margin:0 0 .5rem}
-h1{font-size:1.8rem}
-h2{font-size:1.3rem}
+.brand{
+  font-family:"Playfair Display",Georgia,serif;font-size:1.35rem;font-weight:600;
+  letter-spacing:.12em;margin:0;color:var(--ink);text-decoration:none;
+}
+.rubro{margin:.35rem 0 0;color:var(--muted);font-size:.95rem}
+.code{
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(4.5rem,18vw,7rem);line-height:1;font-weight:600;
+  color:var(--mauve);margin:2rem 0 .5rem;
+}
+h1{font-family:"Playfair Display",Georgia,serif;font-weight:600;margin:0 0 .5rem;font-size:1.8rem}
 p{margin:0 0 1rem}
-.es{border-top:1px solid var(--line);margin-top:1.5rem;padding-top:1.25rem}
-.es .rubro{margin:0 0 .75rem}
 .actions{margin-top:1.75rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
-.btn{display:inline-block;background:var(--accent);color:var(--on-accent);text-decoration:none;padding:.8rem 1.4rem;border-radius:6px;font-weight:600;text-align:center}
-.btn small{display:block;font-weight:400;font-size:.8rem;opacity:.9}
-.btn:hover,.btn:focus-visible{filter:brightness(1.1)}
-.actions a:not(.btn){color:var(--ink);text-decoration-color:var(--line);text-underline-offset:3px}
-.actions a:not(.btn):hover{text-decoration-color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn{
+  display:inline-block;background:var(--ink);color:var(--on-accent);text-decoration:none;
+  padding:.8rem 1.4rem;font-weight:600;text-align:center;
+}
+.btn:hover,.btn:focus-visible{background:var(--mauve)}
+.actions a:not(.btn){color:var(--mauve);text-underline-offset:3px}
+.actions a:not(.btn):hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 .contact{color:var(--muted);font-size:.95rem}
 @media (max-width:480px){.actions{flex-direction:column;align-items:stretch}.btn{width:100%}}
 </style>
@@ -41,19 +59,14 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 <body>
 <main>
 <a class="brand" href="/">Bellafru</a>
-<p class="rubro">Skjønnhet, parfyme og hudpleie</p>
+<p class="rubro">Din daglige luksus</p>
 <div class="code" aria-hidden="true">404</div>
 <h1>Siden finnes ikke</h1>
 <p>Vi finner ikke denne siden hos Bellafru. Den kan være flyttet, eller adressen kan være skrevet feil.</p>
-<section class="es" lang="es">
-<p class="rubro">Belleza, perfumes y cuidado de la piel</p>
-<h2>Página no encontrada</h2>
-<p>No encontramos esta página en Bellafru. Puede que se haya movido o que la dirección esté mal escrita.</p>
-</section>
 <div class="actions">
-<a class="btn" href="/">Til forsiden <small lang="es">Volver al inicio</small></a>
-<a href="/#shop">Katalogen / <span lang="es">Catálogo</span></a>
-<span class="contact">Kontakt · <span lang="es">Contacto</span>: <a href="mailto:kontakt@bellafru.no">kontakt@bellafru.no</a></span>
+<a class="btn" href="/">Til forsiden</a>
+<a href="/#shop">Katalogen</a>
+<span class="contact">Kontakt: <a href="mailto:kontakt@bellafru.no">kontakt@bellafru.no</a></span>
 </div>
 </main>
 </body>
