@@ -1,34 +1,16 @@
 {
   "categories": [
     {
-      "no": "Ansiktspleie",
-      "es": "Cuidado facial",
-      "intro_no": "Når du velger ansiktspleie, bør du først kontrollere produktets formål, innhold og hvordan det er ment brukt. Sammenlign ingredienslisten og oppgitte mengder eller format med behovene dine, og vurder om produktinformasjonen passer med rutinene og hensynene dine. Se etter opplysninger om bruksanvisning, advarsler og oppbevaring og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
-      "intro_es": "Al elegir cuidado facial, revisa el propósito, los ingredientes y el modo de uso indicado. Compara la lista de ingredientes y el formato indicados con lo que necesitas y considera si la información del producto encaja con tu rutina y necesidades. Comprueba las instrucciones, advertencias y condiciones de conservación. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+      "no": "Duft",
+      "intro_no": "Utforsk parfyme og duft for hverdagen. Les duftbeskrivelsen, noter og format på produktsiden, og velg det som passer din stil. Se etter opplysninger om innhold, bruk og oppbevaring. Mangler noe viktig? Skriv til oss før du bestiller."
     },
     {
-      "no": "Kroppspleie",
-      "es": "Cuidado corporal",
-      "intro_no": "Når du velger kroppspleie, bør du først kontrollere hvilken del av rutinen produktet er laget for. Sammenlign innhold, format og ingredienser oppgitt på siden med behovene dine, og vurder om bruksområdet og instruksjonene passer med det du søker. Se etter opplysninger om hvordan produktet skal brukes og oppbevares og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
-      "intro_es": "Al elegir cuidado corporal, revisa qué parte de tu rutina corresponde al producto. Compara el contenido, formato e ingredientes publicados con lo que necesitas y considera si el uso previsto y las indicaciones coinciden con lo que buscas. Comprueba el modo de uso y las condiciones de conservación. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
-    },
-    {
-      "no": "Parfyme og duft",
-      "es": "Perfumes y fragancias",
-      "intro_no": "Når du velger parfyme og duft, bør du først kontrollere duftbeskrivelsen og formatet som står oppført. Sammenlign oppgitte duftnoter, innhold og produktvariant med behovene dine, og vurder om beskrivelsen samsvarer med duftprofilen du foretrekker. Se etter opplysninger om ingrediensinformasjon og bruksanvisning og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
-      "intro_es": "Al elegir perfumes y fragancias, revisa la descripción aromática y el formato publicados. Compara las notas aromáticas, el contenido y la variante indicados con lo que necesitas y considera si la descripción coincide con el perfil aromático que prefieres. Comprueba la información de ingredientes y las instrucciones de uso. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+      "no": "Hudpleie",
+      "intro_no": "Hudpleie for en rolig, gjennomtenkt rutine. Sjekk formål, ingredienser og bruksanvisning, og sammenlign med det du trenger. Les emballasjeinformasjonen på produktsiden. Kontakt oss gjerne hvis du har spørsmål før kjøp."
     },
     {
       "no": "Makeup",
-      "es": "Maquillaje",
-      "intro_no": "Når du velger makeup, bør du først kontrollere produktets farge, format og bruksområde. Sammenlign oppgitte nyanser, ingredienser og produktmål med behovene dine, og vurder om nyansen og egenskapene stemmer med valget ditt. Se etter opplysninger om bruksanvisning, innhold og eventuelle advarsler og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
-      "intro_es": "Al elegir maquillaje, revisa el tono, el formato y el uso previsto. Compara los tonos, ingredientes y medidas del producto indicados con lo que necesitas y considera si el tono y las características corresponden a lo que buscas. Comprueba las instrucciones, el contenido y las advertencias disponibles. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
-    },
-    {
-      "no": "Hudpleierutiner",
-      "es": "Rutinas de cuidado de la piel",
-      "intro_no": "Når du velger hudpleierutiner, bør du først kontrollere hvilke produkter og trinn du ønsker å sammenligne. Sammenlign ingredienser, format og bruksanvisning med behovene dine, og vurder om den publiserte informasjonen dekker spørsmålene dine. Se etter opplysninger om produktets merking og forholdsregler og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
-      "intro_es": "Al elegir rutinas de cuidado de la piel, revisa qué productos y pasos deseas comparar. Compara los ingredientes, el formato y las instrucciones de uso con lo que necesitas y considera si la información publicada responde a tus dudas. Comprueba el etiquetado del producto y las precauciones indicadas. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+      "intro_no": "Makeup i stillferdige nyanser og praktiske formater. Se farge, tekstur og bruksområde på produktsiden, og vurder om det passer deg. Les eventuelle advarsler og innholdsopplysninger. Ta kontakt hvis du trenger mer informasjon."
     }
   ]
 }
