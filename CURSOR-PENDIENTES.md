@@ -24,5 +24,12 @@ Lista interna para el dueño. No está enlazada desde la tienda. Nada de esto se
 - Nombres de proveedor fuera del HTML que ve el cliente y fuera de los textos que pinta la tienda (`supplier-bridge.js`).
 - Campo `supplier` quitado de los JSON públicos del catálogo. Productos, precios e imágenes siguen.
 - `docs/ordrebekreftelse-mal.md` y `docs/voec-mva-sjekkliste.md`.
-- Búsqueda de WhatsApp: sin resultados.
+- Búsqueda de la app de mensajería prohibida en tiendas nórdicas: sin resultados.
 - `create-checkout-session.ts` sin cambios. La kasse sigue cerrada (`CHECKOUT_ENABLED` en false).
+
+## Verificación local (2026-10-23, continuación en local tras corte del agente)
+
+- Enlaces internos de todos los `.html`: comprobados con script, 0 rotos.
+- `index.html` cargado en Chrome headless con servidor estático: sin errores de JavaScript. Solo 404 de `/api/cj-products` y `/api/newsletter` (Pages Functions, no existen en un servidor estático local; esperado).
+- `node --check` en los `.js` de la raíz: OK. No hay `package.json` ni build.
+- Búsqueda de claves `sk_live_`/`sk_test_`/`ghp_`/`EAA`: vacía. `create-checkout-session.ts` sin cambios respecto a `main`.
