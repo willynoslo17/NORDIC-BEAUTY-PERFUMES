@@ -16,7 +16,7 @@ Lista interna para el dueño. No está enlazada desde la tienda. Nada de esto se
 - `functions/` (payload hacia Make y el resumen interno del pedido) sigue nombrando proveedores. No se tocó `functions/`, como pide el encargo. El correo al cliente es solo la plantilla en `docs/ordrebekreftelse-mal.md`.
 - VOEC: número, umbral, si Bellafru entra en el régimen y si el «MVA» publicado sigue vigente. Ver `docs/voec-mva-sjekkliste.md`. No hay cifras nuevas.
 - Nombre del proyecto de Cloudflare Pages y si el despliegue es integración Git o subida directa. No hay workflow ni `wrangler.toml`. No se desplegó nada.
-- Pasar la comprobación de Stripe de `sk_live_` a modo de prueba. Se dejó igual, a propósito.
+- Stripe → modo prueba: hecho con OK del dueño (2026-10-23); el código exige `sk_test_`.
 - PRs abiertos #2 y #3 (canal `/pe/`): no se fusionaron, no se cerraron y no se partió de ellos. Esta rama sale de `main`.
 
 ## Hecho en esta rama
