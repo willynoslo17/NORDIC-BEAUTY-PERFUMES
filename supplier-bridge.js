@@ -1,4 +1,4 @@
-/* Nordic supplier bridge: CJ / Printify / Gelato / Printful catalogs load in parallel and are shown together as one
+/* Nordic supplier bridge: catalog sources load in parallel and are shown together as one
    storefront grid ("Alle produkter"). Each source is rendered as soon as it arrives; supplier data stays internal. */
 (function () {
   "use strict";
@@ -9,7 +9,7 @@
     gelato: "/api/gelato-products",
     printful: "/api/printful-products"
   };
-  /** CJ search keywords → Printify/Gelato/Printful sector keys */
+  /** Search keywords → sector keys for the other catalog sources */
   const POD_QUERY_ALIAS = {
     "phone accessories": "electronics",
     "mobile accessories": "electronics",
@@ -39,13 +39,12 @@
     printful: "catalog/printful-products.json"
   };
   const ID_BASE = { cj: 10001, printify: 20001, gelato: 30001, printful: 40001 };
-  const LABELS = { cj: "CJ", printify: "Printify", gelato: "Gelato", printful: "Printful" };
   /** A slow supplier endpoint never blocks the grid: after this many ms its local fallback is used instead. */
   const SOURCE_TIMEOUT_MS = 8000;
-  /** Gelato (live prices from the Gelato API) loads in the background and may take longer; it never delays readiness. */
+  /** One catalog source loads in the background and may take longer; it never delays readiness. */
   const BACKGROUND_TIMEOUT_MS = 30000;
   const BACKGROUND_SOURCES = ["gelato"];
-  /* Owner decision 2026-10-17: only the store's real CJ products are shown; Printify/Gelato/Printful (POD merch) are off. */
+  /* Owner decision 2026-10-17: only this store's own catalog is shown; the other merch sources are off. */
   const SOURCE_ORDER = ["cj"];
   /** Customer-facing (Norwegian) names for supplier category values. Per-store overrides: config.catMap. */
   const CAT_NB = {
@@ -82,6 +81,14 @@
     return Number.isFinite(nok) && nok > 0 ? nok : 0;
   }
 
+  /* Customer-facing text never names a fulfillment partner. Internal provider keys stay on the item. */
+  function storefrontText(value) {
+    const text = String(value || "").trim();
+    if (!text) return "";
+    if (/^(cj(\s+dropshipping)?|printify|gelato|printful|dropi)$/i.test(text)) return "";
+    return text;
+  }
+
   /* Supplier/catalog status is internal: kept on <html data-catalog-status> for debugging, never shown to customers. */
   function setStatus(text, online) {
     document.documentElement.setAttribute("data-catalog-status", (online ? "online: " : "offline: ") + text);
@@ -91,23 +98,23 @@
     const nok = priceNok(item);
     const baseId = ID_BASE[provider] || 90001;
     const rawId = item.id != null ? String(item.id) : "";
-    /* UI ids must be exact numbers. Long supplier ids (19-digit CJ pids) are never rounded:
+    /* UI ids must be exact numbers. Long supplier ids (19-digit pids) are never rounded:
        the UI uses their last 15 digits and the full id stays a string in externalId / cjPid. */
     const tail = /^\d+$/.test(rawId) ? (Number.isSafeInteger(Number(rawId)) ? Number(rawId) : Number(rawId.slice(-15))) : 0;
     const numericId = tail > 0 ? tail : null;
     const out = {
       id: numericId != null ? numericId : baseId + index,
       externalId: String(item.id || item.gelatoProductUid || item.printfulProductId || item.printifyProductId || ""),
-      name: item.name || (LABELS[provider] || "Supplier") + " product",
+      name: storefrontText(item.name) || "Produkt",
       cat: item.category || item.cat || category,
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
       v: "v" + ((index % 4) + 1),
-      tag: LABELS[provider] || provider,
-      brand: item.brand || LABELS[provider] || provider,
+      tag: "",
+      brand: storefrontText(item.brand) || "Bellafru",
       image: item.image || "",
       sku: item.sku || "",
-      supplier: item.supplier || LABELS[provider] || provider,
+      supplier: "",
       provider: provider,
       badgeColor: BRAND_COLORS[provider] || "#334155"
     };
@@ -153,7 +160,7 @@
     }
   }
 
-  /* Items whose name matches config.cjExclude are hidden unless CJ reports a CE certification (store setting). */
+  /* Items whose name matches config.cjExclude are hidden unless the catalog reports a CE certification (store setting). */
   function cjAllowed(config) {
     if (!config || !config.cjExclude) return () => true;
     const rx = new RegExp(config.cjExclude, "i");
@@ -172,7 +179,7 @@
         if (Array.isArray(payload.products) && payload.products.length) {
           return payload.products
             .filter(allowed)
-            .map((item, index) => curated({ ...item, brand: item.brand || "CJ Dropshipping", supplier: item.supplier || "CJ Dropshipping" }, index, config.category, "cj"))
+            .map((item, index) => curated(item, index, config.category, "cj"))
             .filter(item => item.base > 0)
             .slice(0, 600); // curated set (150) + trend winners
         }
@@ -182,7 +189,7 @@
     } finally {
       clearTimeout(timer);
     }
-    if (config.cjLocalFallback === false) return []; // store sells CJ winners only (no generic local fallback)
+    if (config.cjLocalFallback === false) return []; // store sells the curated catalog only (no generic local fallback)
     const localItems = await loadJson(LOCAL_FILES.cj);
     return localItems.filter(allowed).map((item, index) => curated(item, index, config.category, "cj")).filter(item => item.base > 0).slice(0, 150);
   }
@@ -194,7 +201,7 @@
     if (apiItems.length) {
       return apiItems.map((item, index) => curated({ ...item, provider }, index, category, provider)).filter(item => item.base > 0).slice(0, 50);
     }
-    // Printify may still use curated selected JSON. Gelato/Printful NEVER use *-selected clones.
+    // One source may still use curated selected JSON. The others NEVER use *-selected clones.
     if (provider === "printify") {
       const selected = await loadJson(LOCAL_FILES.printify);
       if (selected.length) {
@@ -226,7 +233,7 @@
     return list;
   }
 
-  /* Printful/Gelato categories are product-type names ("All-Over Print Tote Bag"): group them by keyword. */
+  /* Some catalog categories are product-type names ("All-Over Print Tote Bag"): group them by keyword. */
   const POD_CAT_RULES = [
     [/\b(mugs?|cups?|tumblers?|bottles?)\b/i, "Krus"],
     [/\b(posters?|prints?|canvas|framed|wall art)\b/i, "Plakater"],
@@ -247,7 +254,7 @@
     const raw = String(item.cat || "").trim();
     const key = raw.toLowerCase();
     if (cfg.catMap && cfg.catMap[key]) return cfg.catMap[key];
-    /* CJ "category" is only the store sector / search word (e.g. "beauty"): use the store's own category name. */
+    /* For this store the catalog "category" is only the sector / search word (e.g. "beauty"): use the store's own category name. */
     if (provider === "cj" || !key || key === String(cfg.query || "").toLowerCase() || key === podQuery(cfg.query)) return cfg.category || raw;
     if (CAT_NB[key]) return CAT_NB[key];
     if (provider === "printful" || provider === "gelato") return podCategory(item);
@@ -314,7 +321,7 @@
     const query = cfg.query || "";
     const keep = storefrontItem();
     const loaders = {
-      cj: cfg.cj === false ? Promise.resolve([]) : loadCjSelected(cfg), // store opted out of CJ: no request
+      cj: cfg.cj === false ? Promise.resolve([]) : loadCjSelected(cfg), // store opted out of this catalog: no request
       printify: loadPodCatalog("printify", category, query),
       gelato: loadPodCatalog("gelato", category, query),
       printful: loadPodCatalog("printful", category, query)
